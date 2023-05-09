@@ -1,0 +1,957 @@
+[
+    {
+        "id": 1,
+        "pregunta": "¿Qué tipo de servicio desea usar?",
+        "autor":"BOT",
+        "respuestas": [
+            {
+                "respuesta": "Informacion sobre las enfermedades venereas",
+                "siguiente_pregunta": 2
+            },
+            {
+                "respuesta": "Posible diagnostico",
+                "siguiente_pregunta": 3
+            },
+            {
+                "respuesta": "Tratamiento profesional",
+                "siguiente_pregunta": 3
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "idrama":1,
+        "pregunta": "¿Que tipo de informacion desea consultar sobre las ETS?",
+        "autor":"BOT",
+        "respuestas": [
+            {
+                "respuesta": "Informacion general de las ETS",
+                "siguiente_pregunta": 5
+            },
+            {
+                "respuesta": "Informacion sobre los diferentes tipos de ETS",
+                "siguiente_pregunta": 6
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "idrama":1,
+        "pregunta": "Estas son las opciones para la informacion general sobre las ETS",
+        "autor":"BOT",
+        "respuestas": [
+            {
+                "respuesta": "¿Que son las ETS?",
+                "siguiente_pregunta": 7
+            },
+            {
+                "respuesta": "¿Como se contraen las ETS?",
+                "siguiente_pregunta": 8
+            },
+            {
+                "respuesta": "¿Como se diagnostican las ETS?",
+                "siguiente_pregunta": 9
+            },
+            {
+                "respuesta": "¿Cuales son los sintomas de la ETS?",
+                "siguiente_pregunta": 10
+            },
+            {
+                "respuesta": "¿Como se tratan las ETS?",
+                "siguiente_pregunta": 11
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "idrama":1,
+        "pregunta": "Seleccione la ETS la cual quiere obtener la informacion",
+        "autor":"BOT",
+        "respuestas": [
+            {
+                "respuesta": "Clamidia",
+                "siguiente_pregunta": 12
+            },
+            {
+                "respuesta": "Gonorrea",
+                "siguiente_pregunta": 13
+            },
+            {
+                "respuesta": "Herpes genital",
+                "siguiente_pregunta": 14
+            },
+            {
+                "respuesta": "Sifilis",
+                "siguiente_pregunta": 15
+            },
+            {
+                "respuesta": "VIH/SIDA",
+                "siguiente_pregunta": 16
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "idrama":1,
+        "autor":"BOT",
+        "pregunta": "Las enfermedades de transmisión sexual -ETS- (que anteriormente se conocían como enfermedades venéreas), son infecciones que se contagian de una persona a otra usualmente durante el sexo vaginal, anal u oral. Son muy comunes y muchas personas con ETS no tienen síntomas. Por eso, es importante hacerte exámenes sin importar si tienes síntomas de las ETS o no. Sin tratamiento, las enfermedades de transmisión sexual pueden causar serios problemas de salud. La buena noticia es que hacerte los  exámenes no es complicado y la mayoría de estas infecciones son fáciles de tratar.",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "idrama":1,
+        "autor":"BOT",
+        "pregunta": "Puedes contraer una ETS al tener relaciones sexuales vaginales, anales u orales con alguien que tenga alguna de ellas. Cualquier persona sexualmente activa puede contraer una enfermedad de transmisión sexual. Ni siguiera es necesario hacer el acto sexual completo (tener relaciones sexuales anales o vaginales) para contraer una ETS. Esto se debe a que algunas de estas enfermedades, como el herpes y el VPH, se propagan por el contacto de piel a piel.",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "idrama":1,
+        "autor":"BOT",
+        "pregunta": "Hay tres pruebas diferentes que se usan para diagnosticar el VIH:\nUna prueba de anticuerpos usa saliva o sangre para detectar anticuerpos contra el VIH\nUna prueba de antígenos/anticuerpos detecta tanto un antígeno denominado 'P24' como anticuerpos contra el VIH\nUna prueba de ácidos nucleicos (NAT) detecta el VIH en la sangre. Las NAT no se usan para las evaluaciones de detección de rutina porque son costosas.",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "idrama":1,
+        "autor":"BOT",
+        "pregunta": "Estos solo podrian ser alguno de los sintomas de las ETS existentes:\nSecreción inusual del pene o la vagina\nLlagas o verrugas en el área genital\nMicción frecuente o dolorosa\nPicazón y enrojecimiento en el área genital\nAmpollas o llagas en o alrededor de la boca\nOlor vaginal anormal\nPicazón, dolor o sangrado anal\nDolor abdominal\nFiebre",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "idrama":1,
+        "autor":"BOT",
+        "pregunta": "Los antibióticos pueden tratar las ETS causadas por bacterias o parásitos. No existe cura para las ETS causadas por un virus, pero a menudo los medicamentos pueden ayudar con los síntomas y reducir su riesgo de propagar la infección.",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "idrama":1,
+        "autor":"BOT",
+        "pregunta": "La clamidia es una infección de transmisión sexual (ITS) causada por la bacteria Chlamydia trachomatis. Esta infección puede afectar tanto a hombres como a mujeres y puede propagarse a través del contacto sexual vaginal, oral o anal sin protección con una persona infectada.\nSíntomas:En muchas personas, la clamidia no causa síntomas, por lo que es importante hacerse pruebas de detección de ITS regularmente si se es sexualmente activo. Sin embargo, algunos síntomas que pueden aparecer incluyen: Ardor o dolor al orinar,Secreción anormal del pene o la vagina,Dolor durante las relaciones sexuales,Sangrado vaginal fuera de la menstruación\nDiagnóstico:La clamidia se diagnostica a través de pruebas de laboratorio que analizan una muestra de células tomadas de la vagina, el cuello uterino, el pene o el ano. Las pruebas pueden incluir un análisis de orina, un hisopo de la uretra o un hisopo vaginal o anal.\nTratamiento:La clamidia se trata con antibióticos, que pueden incluir azitromicina o doxiciclina. Es importante que se tomen todos los medicamentos según las indicaciones y se evite tener relaciones sexuales hasta que se completen los antibióticos y se haya resuelto la infección. También se recomienda que las parejas sexuales se sometan a pruebas y tratamiento si se encuentra una infección por clamidia en una persona.",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "idrama":1,
+        "autor":"BOT",
+        "pregunta": "La gonorrea es una infección de transmisión sexual (ITS) causada por la bacteria Neisseria gonorrhoeae. Se puede propagar a través del contacto sexual vaginal, oral o anal sin protección con una persona infectada.\nSíntomas: La gonorrea también puede no causar síntomas en algunas personas, lo que hace que sea importante hacerse pruebas de detección de ITS regularmente si se es sexualmente activo. Sin embargo, algunos síntomas que pueden aparecer incluyen: Secreción anormal del pene o la vagina,Dolor o ardor al orinar, Dolor durante las relaciones sexuales, Sangrado vaginal fuera de la menstruación, Inflamación y dolor en los testículos en los hombres\nDiagnóstico:La gonorrea se diagnostica a través de pruebas de laboratorio que analizan una muestra de células tomadas de la vagina, el cuello uterino, el pene o el ano. Las pruebas pueden incluir un análisis de orina, un hisopo de la uretra o un hisopo vaginal o anal.\nTratamiento: La gonorrea se trata con antibióticos, que pueden incluir ceftriaxona y azitromicina. Es importante que se tomen todos los medicamentos según las indicaciones y se evite tener relaciones sexuales hasta que se completen los antibióticos y se haya resuelto la infección. También se recomienda que las parejas sexuales se sometan a pruebas y tratamiento si se encuentra una infección por gonorrea en una persona.",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "idrama":1,
+        "autor":"BOT",
+        "pregunta": "El herpes genital es una infección de transmisión sexual (ITS) causada por el virus del herpes simple (VHS). La infección puede ser transmitida por contacto sexual vaginal, oral o anal con una persona infectada.\nSíntomas:La mayoría de las personas infectadas con herpes genital no presentan síntomas o presentan síntomas leves, pero algunas pueden experimentar síntomas más graves. Los síntomas pueden incluir: Lesiones dolorosas o ampollas en los genitales, el ano o la boca, Dolor al orinar, Comezón o sensación de hormigueo en el área afectada, Fiebre, dolor de cabeza y dolor muscular, Secreción vaginal anormal en las mujeres.\nDiagnóstico:El herpes genital se diagnostica a través de una prueba de laboratorio que analiza una muestra de las lesiones o ampollas. También se pueden hacer pruebas de sangre para detectar anticuerpos contra el virus del herpes simple.\nTratamiento: Actualmente no existe una cura para el herpes genital, pero los síntomas pueden controlarse con medicamentos antivirales como aciclovir, valaciclovir o famciclovir. Estos medicamentos pueden reducir la duración y la frecuencia de los brotes de herpes genital, pero no eliminan completamente el virus del cuerpo. También es importante tomar medidas para reducir la propagación de la infección, como el uso de preservativos durante las relaciones sexuales y la abstinencia sexual durante los brotes.",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "idrama":1,
+        "autor":"BOT",
+        "pregunta": "La sífilis es una infección de transmisión sexual (ITS) causada por la bacteria Treponema pallidum. La infección se puede transmitir por contacto sexual vaginal, oral o anal con una persona infectada.\nSíntomas: Los síntomas de la sífilis pueden variar en función de la etapa de la enfermedad. En la etapa temprana de la infección, los síntomas pueden incluir: Una lesión o úlcera indolora en los genitales, el ano o la boca, Erupción cutánea en la palma de las manos o en la planta de los pies, Fiebre y dolor de garganta.\nEn la etapa avanzada de la enfermedad, los síntomas pueden incluir: Pérdida de cabello y pérdida de peso, Dolor de huesos y articulaciones, Dolor de cabeza y problemas de visión, Problemas neurológicos.\nDiagnóstico:La sífilis se diagnostica a través de pruebas de laboratorio que analizan una muestra de sangre. Las pruebas pueden incluir una prueba de detección de anticuerpos, como una prueba de VDRL o RPR, seguida de una prueba confirmatoria, como una prueba de FTA-ABS.\nTratamiento:La sífilis se trata con antibióticos, que pueden incluir penicilina, doxiciclina o azitromicina, dependiendo de la etapa de la infección y la gravedad de los síntomas. Es importante tomar todos los medicamentos según las indicaciones y realizar un seguimiento con el médico para asegurarse de que la infección se haya resuelto por completo.",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "idrama":1,
+        "autor":"BOT",
+        "pregunta": "El VIH (virus de inmunodeficiencia humana) es un virus que ataca el sistema inmunológico del cuerpo y puede llevar a la enfermedad del SIDA (síndrome de inmunodeficiencia adquirida). El VIH se transmite a través del contacto con fluidos corporales infectados, como la sangre, el semen, las secreciones vaginales y la leche materna.\nSíntomas: Las personas infectadas con VIH pueden no tener síntomas en las primeras etapas de la infección, pero pueden experimentar síntomas similares a los de la gripe en las primeras semanas después de la exposición. Los síntomas pueden incluir: Fiebre, Dolor de cabeza, Dolor muscular, Dolor de garganta, Ganglios linfáticos inflamados. A medida que la infección por VIH progresa, el sistema inmunológico se debilita y la persona puede experimentar infecciones oportunistas y otros síntomas graves, como diarrea crónica, fiebre persistente, pérdida de peso y neumonía.\nDiagnóstico:El VIH se diagnostica a través de una prueba de sangre que detecta la presencia de anticuerpos contra el virus. Las pruebas de VIH también se pueden realizar utilizando muestras de saliva u orina.\nTratamiento: Actualmente, no hay cura para el VIH/SIDA, pero el tratamiento antirretroviral (TAR) puede reducir la cantidad de virus en el cuerpo y mejorar la salud y la esperanza de vida de las personas infectadas. El TAR implica tomar una combinación de medicamentos antivirales que se deben tomar según las indicaciones para ser efectivos.",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "Te realizare un posible diagnostico contestando estas preguntas que te hare a continuacion: 1. ¿Has tenido relaciones sexuales sin proteccion?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 18
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 17
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "No es necesario realizar un diagnóstico de ETS en este momento.",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar seccion",
+                "siguiente_pregunta": null
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "¿Ha experimentado algún síntoma en los últimosaños/días/semanas?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 20
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 19
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "Es posible que no tengas ninguna ETS",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            },
+            {
+                "respuesta": "Continuar con un tratamiento profesional",
+                "siguiente_pregunta": 4
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "¿Ha experimentado dolor o picazón en la zona genital?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 22
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 21
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "¿Ha tenido alguna lesion firme, redonda, pequeño e indoloro en sus genitales o erupciones en plantas y manos?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 23
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 22
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "¿Ha notado alguna descarga anormal en lazona genital?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 25
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 24
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "Posible diagnóstico: Sífilis",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            },
+            {
+                "respuesta": "Continuar con un tratamiento profesional",
+                "siguiente_pregunta": 4
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "¿Ha tenido ampollas dolorosas rodeados de errojecimiento en sus genitales?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 26
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 25
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "¿Ha experimentado algún dolor al orinar?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 28
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 27
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "Posible diagnóstico: Herpes Genital",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            },
+            {
+                "respuesta": "Continuar con un tratamiento profesional",
+                "siguiente_pregunta": 4
+            }
+        ]
+    },
+    {
+        "id": 27,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "¿Ha tenido pequeñas lesiones planas o con bultos en forma decoliflor en genitales, o en piel?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 29
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 28
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "¿Ha tenido dolor pélvico o al defecar?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 31
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 30
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "Posible diagnóstico: Virus del Papiloma Humano (VPH)",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            },
+            {
+                "respuesta": "Continuar con un tratamiento profesional",
+                "siguiente_pregunta": 4
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "¿Ha tenido dolor o sangrado durante relaciones sexuales?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 33
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 32
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "Posible diagnóstico: Gonorrea",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            },
+            {
+                "respuesta": "Continuar con un tratamiento profesional",
+                "siguiente_pregunta": 4
+            }
+        ]
+    },
+    {
+        "id": 32,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "Posible diagnostico diferencial para infección en genitales por otra causa",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            },
+            {
+                "respuesta": "Continuar con un tratamiento profesional",
+                "siguiente_pregunta": 4
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "idrama":2,
+        "autor":"BOT",
+        "pregunta": "Posible diagnóstico: Clamidia",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            },
+            {
+                "respuesta": "Continuar con un tratamiento profesional",
+                "siguiente_pregunta": 4
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "Para generar un tratamiento profesional necesito que respondas las siguientes preguntas: ¿Cual es tu sexo?",
+        "respuestas": [
+            {
+                "respuesta": "Hombre",
+                "siguiente_pregunta": 34
+            },
+            {
+                "respuesta": "Mujer",
+                "siguiente_pregunta": 34
+            }
+        ]
+    },
+    {
+        "id": 34,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Tienes una orientación sexual específica?",
+        "respuestas": [
+            {
+                "respuesta": "Si, soy heterosexual",
+                "siguiente_pregunta": 35
+            },
+            {
+                "respuesta": "Si, soy homosexual",
+                "siguiente_pregunta": 35
+            },
+            {
+                "respuesta": "Tengo otra orientacion sexual",
+                "siguiente_pregunta": 35
+            },
+            {
+                "respuesta": "Prefiero no decirlo",
+                "siguiente_pregunta": 35
+            }
+        ]
+    },
+    {
+        "id": 35,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Cuántas parejas sexuales has tenido en los últimos 6 meses?",
+        "respuestas": [
+            {
+                "respuesta": "Ninguna",
+                "siguiente_pregunta": 36
+            },
+            {
+                "respuesta": "Una",
+                "siguiente_pregunta": 36
+            },
+            {
+                "respuesta": "Dos o mas",
+                "siguiente_pregunta": 36
+            }
+        ]
+    },
+    {
+        "id": 36,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Has sufrido abuso sexual en el pasado?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 37
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 37
+            },
+            {
+                "respuesta": "Prefiero no decirlo",
+                "siguiente_pregunta": 37
+            }
+        ]
+    },
+    {
+        "id": 37,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Has consumido drogas o alcohol en exceso en el pasado reciente?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 38
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 38
+            },
+            {
+                "respuesta": "Ocasionalmente",
+                "siguiente_pregunta": 38
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Desde cuándo has experimentado estos síntomas?",
+        "respuestas": [
+            {
+                "respuesta": "Menos de una semana",
+                "siguiente_pregunta": 39
+            },
+            {
+                "respuesta": "1-2 semanas",
+                "siguiente_pregunta": 39
+            },
+            {
+                "respuesta": "2-4 semanas",
+                "siguiente_pregunta": 39
+            },
+            {
+                "respuesta": "Mas de 4 semanas",
+                "siguiente_pregunta": 39
+            }
+        ]
+    },
+    {
+        "id": 38,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Desde cuándo has experimentado estos síntomas?",
+        "respuestas": [
+            {
+                "respuesta": "Menos de una semana",
+                "siguiente_pregunta": 39
+            },
+            {
+                "respuesta": "1-2 semanas",
+                "siguiente_pregunta": 39
+            },
+            {
+                "respuesta": "2-4 semanas",
+                "siguiente_pregunta": 39
+            },
+            {
+                "respuesta": "Mas de 4 semanas",
+                "siguiente_pregunta": 39
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Tienes alguna enfermedad crónica o afección médica?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 40
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 41
+            }
+        ]
+    },
+    {
+        "id": 40,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Cual enfermedad posee?",
+        "respuestas": [
+            {
+                "respuesta": "Enfermedad cardiovascular",
+                "siguiente_pregunta": 41
+            },
+            {
+                "respuesta": "Enfermedad Respiratoria",
+                "siguiente_pregunta": 41
+            },
+            {
+                "respuesta": "Cancer",
+                "siguiente_pregunta": 41
+            },
+            {
+                "respuesta": "Enfermedad Neurologica",
+                "siguiente_pregunta": 41
+            },
+            {
+                "respuesta": "Enfermedad Sanguinea",
+                "siguiente_pregunta": 41
+            },
+            {
+                "respuesta": "Otra Enfermedad",
+                "siguiente_pregunta": 41
+            }
+        ]
+    },
+    {
+        "id": 41,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Has tenido alguna cirugía previa?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 42
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 43
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Cual de las siguientes cirugias aplico?",
+        "respuestas": [
+            {
+                "respuesta": "Vasectomía",
+                "siguiente_pregunta": 43
+            },
+            {
+                "respuesta": "Histerectomía",
+                "siguiente_pregunta": 43
+            },
+            {
+                "respuesta": "Otro cirugia",
+                "siguiente_pregunta": 43
+            },
+            {
+                "respuesta": "No recuerdo el nombre de este",
+                "siguiente_pregunta": 43
+            }
+        ]
+    },
+    {
+        "id": 43,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "Tienes antecedentes familiares de enfermedades de transmisión sexual?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 44
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 45
+            }
+        ]
+    },
+    {
+        "id": 44,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Cual de las siguientes ETS posee alguno de su nucleo familiar?",
+        "respuestas": [
+            {
+                "respuesta": "VIH/SIDA",
+                "siguiente_pregunta": 45
+            },
+            {
+                "respuesta": "Herpes Genital",
+                "siguiente_pregunta": 45
+            },
+            {
+                "respuesta": "Clamidia",
+                "siguiente_pregunta": 45
+            },
+            {
+                "respuesta": "Gonorrea",
+                "siguiente_pregunta": 45
+            },
+            {
+                "respuesta": "Sifilis",
+                "siguiente_pregunta": 45
+            },
+            {
+                "respuesta": "Otra ",
+                "siguiente_pregunta": 45
+            }
+        ]
+    },
+    {
+        "id": 45,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Estás recibiendo tratamiento para alguna otra afección médica actualmente?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 46
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 47
+            }
+        ]
+    },
+    {
+        "id": 46,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Cual de los siguientes tratamiento esta recibiendo?",
+        "respuestas": [
+            {
+                "respuesta": "Farmacoterapia",
+                "siguiente_pregunta": 46
+            },
+            {
+                "respuesta": "Quimioterapia",
+                "siguiente_pregunta": 46
+            },
+            {
+                "respuesta": "Cirugia",
+                "siguiente_pregunta": 46
+            },
+            {
+                "respuesta": "Otro",
+                "siguiente_pregunta": 46
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿A qué edad comenzaste a tener relaciones sexuales?",
+        "respuestas": [
+            {
+                "respuesta": "Menos de 16 años",
+                "siguiente_pregunta": 48
+            },
+            {
+                "respuesta": "16-18 años",
+                "siguiente_pregunta": 48
+            },
+            {
+                "respuesta": "19-24 años",
+                "siguiente_pregunta": 48
+            },
+            {
+                "respuesta": "Mas de 24 años",
+                "siguiente_pregunta": 48
+            },
+            {
+                "respuesta": "Aun no he tenido relaciones sexuales",
+                "siguiente_pregunta": 48
+            }
+        ]
+    },
+    {
+        "id": 48,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Con qué frecuencia tienes relaciones sexuales?",
+        "respuestas": [
+            {
+                "respuesta": "Diariamente",
+                "siguiente_pregunta": 49
+            },
+            {
+                "respuesta": "Semanalmente",
+                "siguiente_pregunta": 49
+            },
+            {
+                "respuesta": "Mensualmente",
+                "siguiente_pregunta": 49
+            },
+            {
+                "respuesta": "Menos frecuente que mensulamente",
+                "siguiente_pregunta": 49
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Utilizas algún método anticonceptivo de la lista?",
+        "respuestas": [
+            {
+                "respuesta": "Condon",
+                "siguiente_pregunta": 50
+            },
+            {
+                "respuesta": "Anticonceptivos hormonales",
+                "siguiente_pregunta": 50
+            },
+            {
+                "respuesta": "Otro tipo de anticonceptivo",
+                "siguiente_pregunta": 50
+            },
+            {
+                "respuesta": "No uso ningun metodo anticonceptivo",
+                "siguiente_pregunta": 50
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Alguna vez has tenido una enfermedad de transmisión sexual previamente?",
+        "respuestas": [
+            {
+                "respuesta": "Si",
+                "siguiente_pregunta": 51
+            },
+            {
+                "respuesta": "No",
+                "siguiente_pregunta": 52
+            }
+        ]
+    },
+    {
+        "id": 51,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¿Cual de las siguientes enfermedades de transmision sexual tuvo?",
+        "respuestas": [
+            {
+                "respuesta": "VIH/SIDA",
+                "siguiente_pregunta": 52
+            },
+            {
+                "respuesta": "Herpes Genital",
+                "siguiente_pregunta": 52
+            },
+            {
+                "respuesta": "Clamidia",
+                "siguiente_pregunta": 52
+            },
+            {
+                "respuesta": "Gonorrea",
+                "siguiente_pregunta": 52
+            },
+            {
+                "respuesta": "Sifilis",
+                "siguiente_pregunta": 52
+            },
+            {
+                "respuesta": "Otra ",
+                "siguiente_pregunta": 52
+            }
+        ]
+    },
+    {
+        "id": 52,
+        "idrama":3,
+        "autor":"BOT",
+        "pregunta": "¡Gracias por tomarse el tiempo de responder estas preguntas! Proximamente un especialista del area de la salud lo guiará y le brindará una atención personalizada.",
+        "respuestas": [
+            {
+                "respuesta": "Finalizar la consulta",
+                "siguiente_pregunta": null
+            }
+        ]
+    }
+]
