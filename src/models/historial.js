@@ -4,6 +4,10 @@ const historialSchema = mongoose.Schema({
     iduser:{
         type:mongoose.Types.ObjectId
     },
+    nameuser:{
+        type:String,
+        required:true
+    },
     historial:[{
         id:{
             type:Number
@@ -17,6 +21,12 @@ const historialSchema = mongoose.Schema({
     }],
     revision:{
         type:Boolean
+    },
+    prioridad:{
+        type:Boolean
+    },
+    idmedico:{
+        type:mongoose.Types.ObjectId
     }
 },
     { timestamps: true }

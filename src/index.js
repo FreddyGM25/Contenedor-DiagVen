@@ -4,9 +4,13 @@ const app = express();
 const { default: mongoose } = require('mongoose')
 require("dotenv").config()
 const multer = require('multer')
+const bcrypt = require('bcryptjs')
 const upload = multer({ dest: 'uploads/' })
-const userSchema = require('./models/questions')
+const { TokenAssign, TokenVerify, AuthCheck, TokenRemove } = require('./middleware/autentication')
+const { getTemplate, sendEmail } = require('./middleware/email')
+const userSchema = require('./models/user')
 const historialSchema = require('./models/historial')
+const medicoSchema = require('./models/medico')
 const cors = require('cors')
 
 // Datos del árbol de preguntas y respuestas
@@ -31,20 +35,30 @@ app.post('/registro', upload.none(), async (req, res) => {
   if (ver == undefined || ver == null) {
     const id = await user.save()
     const historial = new historialSchema({
-      iduser: id._id
+      iduser: id._id,
+      nameuser:user.nombre,
+      revision: false
     })
     await historial.save()
     return res.status(200).json({ Status: "Success", message: "Gracias, a continuacion seguire atendiendo su solicitud", id: id._id })
   } else {
-    const historial = new historialSchema({
-      iduser: ver._id
+    await userSchema.updateOne({ _id:ver._id }, {
+      $set: {
+        nombre:user.nombre
+      }
     })
-    await historial.save()
+    await historialSchema.updateOne({ iduser:ver._id }, {
+      $set: {
+        nameuser:user.nombre,
+        historial:[]
+      }
+    })
+    console.log(`Hola ${ver.nombre} has pasado por aqui antes, a continuacion seguiremos los pasos`)
     res.status(200).json({ Status: "Success", message: `Hola ${ver.nombre} has pasado por aqui antes, a continuacion seguiremos los pasos`, id: ver._id})
   }
 })
 
-
+//Preguntas chatbot
 app.get('/preguntas/:id', upload.none(), async (req, res) => {
   const idPregunta = parseInt(req.params.id);
 
@@ -67,7 +81,6 @@ app.put('/respuestas', upload.none(), async (req, res) => {
     const respuestaSeleccionada = pregunta.respuestas.find(
       (r) => r.respuesta === respuesta
     );
-    console.log(respuesta)
     if (respuestaSeleccionada) {
       const siguientePreguntaId = respuestaSeleccionada.siguiente_pregunta;
       if (siguientePreguntaId === null) {
@@ -80,7 +93,6 @@ app.put('/respuestas', upload.none(), async (req, res) => {
             pregunta: pregunta.pregunta,
             respuesta: respuestaSeleccionada.respuesta
           }
-          console.log(res.body)
           await historialSchema.updateOne({ iduser: req.body.iduser }, { $push: { historial: historialc } })
         }
         // Obtener la siguiente pregunta
@@ -126,6 +138,89 @@ app.put('/respuestas/:id_pregunta', upload.none(), async (req, res) => {
     res.status(404).json({ mensaje: 'Pregunta no encontrada.' });
   }
 });
+
+//Endpoint registro medico
+app.post('/medico/registro', upload.none(), async (req, res) => {
+  const ver = await medicoSchema.findOne({ email: req.body.email })
+  if (ver == undefined || ver == null) {
+    const salt = await bcrypt.genSalt(10)
+    const hashPassword = await bcrypt.hash(req.body.password, salt)
+    req.body.password = hashPassword
+    const user = new medicoSchema({
+      nombre: req.body.nombre,
+      apellido: req.body.apellido,
+      email: req.body.email,
+      password: req.body.password,
+      telefono: req.body.telefono
+    })
+    await user.save()
+    return res.status(200).json({ Status: "Success", message: "Se registro el medico correctamente"})
+  } else {
+    res.status(200).json({ Status: "Error", message: "El correo electronico ingresado se encuentra en uso"})
+  }
+})
+
+app.post('/medico/login', upload.none(), async (req, res) => {
+  const password = req.body.password
+  const userExist = await medicoSchema.findOne({ email: req.body.email })
+  if (userExist) {
+      const isPasswordMatched = await bcrypt.compare(password, userExist.password)
+      if (isPasswordMatched) {
+        const token = await TokenAssign(userExist)
+        return res.status(200).send({response: "Success", message: 'Inicio sesion', email: userExist.email, token: token })
+      } 
+      return res.status(200).send({ response: "Error", message: "Contraseña incorrecta" })
+  } else {
+      return res.status(200).send({response: "Error", message: "No se pudo encontrar el usuario" })
+  }
+})
+
+app.put('/medico/diagnostico', upload.none(), async (req, res) => {
+  const token = req.headers.authorization.split(' ').pop()
+  const tokenver = await TokenVerify(token)
+  if (tokenver) {
+      const medico = await medicoSchema.findById(tokenver._id)
+      const user = await userSchema.findById(req.body.iduser)
+      let prioridad = req.body.prioridad
+      if(prioridad == 'true'){
+        prioridad = true
+      }else{
+        prioridad = false
+      }
+      let revision= req.body.revision
+      if(revision== 'true'){
+        revision= true
+      }else{
+        revision= false
+      }
+      await historialSchema.updateOne({ _id:req.body.historialid }, {
+        $set: {
+          revision: revision,
+          prioridad: prioridad,
+          idmedico: tokenver._id
+        }
+      })
+      const template = getTemplate(req.body.texto, medico, user);
+      const resp = await sendEmail(user.email, template);
+      if(resp == false) return res.status(200).send({response: "Error", message: "Error al enviar el email"})
+      return res.status(200).send({response: "Success", message: "Email enviado correctamente"})
+  } else {
+      return res.status(200).send({response: "Error", messsage: "El usuario no existe" })
+  }
+})
+
+app.get('/medico/revisado', upload.none(), async (req, res) => {
+  const token = req.headers.authorization.split(' ').pop()
+  const tokenver = await TokenVerify(token)
+  const result = await historialSchema.find({$and : [{revision:true}, {idmedico:tokenver._id}]  })
+  return res.status(200).send({response: "Success", data: result})
+})
+
+app.get('/medico/norevisado', upload.none(), async (req, res) => {
+  const result = await historialSchema.find({revision:false})
+  return res.status(200).send({response: "Success", data: result})
+})
+
 
 mongoose
   .connect(process.env.MONGODB_URI)
