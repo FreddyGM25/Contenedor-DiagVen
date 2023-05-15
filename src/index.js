@@ -171,7 +171,7 @@ app.post('/medico/login', upload.none(), async (req, res) => {
       } 
       return res.status(200).send({ response: "Error", message: "Contraseña incorrecta" })
   } else {
-      return res.status(200).send({response: "Error", message: "No se pudo encontrar el usuario" })
+      return res.status(200).send({response: "Error", message: "Correo electronico incorrecto" })
   }
 })
 
@@ -209,16 +209,21 @@ app.put('/medico/diagnostico', upload.none(), async (req, res) => {
   }
 })
 
-app.get('/medico/revisado', upload.none(), async (req, res) => {
+app.post('/medico/revisado', upload.none(), async (req, res) => {
   const token = req.headers.authorization.split(' ').pop()
   const tokenver = await TokenVerify(token)
   const result = await historialSchema.find({$and : [{revision:true}, {idmedico:tokenver._id}]  })
-  return res.status(200).send({response: "Success", data: result})
+  return res.status(200).send({response: "Success", datos: result})
 })
 
 app.get('/medico/norevisado', upload.none(), async (req, res) => {
   const result = await historialSchema.find({revision:false})
-  return res.status(200).send({response: "Success", data: result})
+  return res.status(200).send({response: "Success", datos: result})
+})
+
+app.post('/medico/seep', upload.none(), async (req, res) => {
+  const result = await historialSchema.findById(req.body.id)
+  return res.status(200).send({response: "Success", datos: result})
 })
 
 
