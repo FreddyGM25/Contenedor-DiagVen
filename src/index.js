@@ -23,7 +23,6 @@ app.use(cors({
 
 // Endpoint para obtener una pregunta
 app.post('/registro', upload.none(), async (req, res) => {
-  console.log(req.body)
   if(req.body.nombre == "") return res.status(200).json({ Status: "Error", message: "Falta el campo 'Nombre' por completar"})
   if(req.body.email == "") return res.status(200).json({ Status: "Error", message: "Falta el campo 'Email' por completar"})
   const user = new userSchema({
