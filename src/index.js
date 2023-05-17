@@ -18,8 +18,14 @@ const arbol = require('./questions/question.json');
 
 app.use(bodyParser.json());
 app.use(cors({
-  origin: "*",
+  origin: "*", 
+  credentials:true,            //access-control-allow-credentials:true
+  optionSuccessStatus:200,
 }));
+
+app.get('/', (req, res) => {
+  res.send("Welcome to my API bet")
+})
 
 // Endpoint para obtener una pregunta
 app.post('/registro', upload.none(), async (req, res) => {
