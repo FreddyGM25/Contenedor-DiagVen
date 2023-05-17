@@ -322,7 +322,7 @@
         "id": 23,
         "idrama":2,
         "autor":"BOT",
-        "pregunta": "Posible diagnóstico: Sífilis",
+        "pregunta": "Posible diagnóstico: Sífilis.\nRecomendación: Visitar a un doctor para tratarlo con penicilina benzatínica.",
         "respuestas": [
             {
                 "respuesta": "Finalizar la consulta",
