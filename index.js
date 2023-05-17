@@ -238,6 +238,6 @@ mongoose
   .catch((error) => console.error(error))
 
 // Iniciar el servidor
-app.listen(3000, () => {
-  console.log('Servidor iniciado en el puerto 3000');
+app.listen(process.env.PORT, () => {
+  console.log(`Servidor iniciado en el puerto 3000${process.env.PORT}`);
 });
