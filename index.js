@@ -13,6 +13,8 @@ const historialSchema = require('./src/models/historial')
 const medicoSchema = require('./src/models/medico')
 const cors = require('cors')
 
+const PORT = process.env.PORT || 3000;
+
 // Datos del árbol de preguntas y respuestas
 const arbol = require('./src/questions/question.json');
 
@@ -238,6 +240,6 @@ mongoose
   .catch((error) => console.error(error))
 
 // Iniciar el servidor
-app.listen(process.env.PORT, () => {
-  console.log(`Servidor iniciado en el puerto 3000${process.env.PORT}`);
+app.listen(PORT, () => {
+  console.log(`Servidor iniciado en el puerto ${PORT}`);
 });
